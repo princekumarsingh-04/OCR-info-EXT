@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OCR Information Extractor</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>OCR Information Extractor</h1>
+
+        <form id="upload-form">
+            <label for="image-input">Upload Aadhaar Image:</label>
+            <input type="file" id="image-input" accept="image/*" required>
+            <button type="submit">Extract Information</button>
+        </form>
+
+        <div id="result">
+            <h2>Extracted Information</h2>
+            <p><strong>Name:</strong> <span id="name"></span></p>
+            <p><strong>Aadhaar Number:</strong> <span id="aadhaar-number"></span></p>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/tesseract.js@2.1.4/dist/tesseract.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
